@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* @see https://www.w3schools.com/howto/howto_css_cards.asp*/
+        .card__container {
+
+            box-shadow: 0 4px 8px 0 rgba(7, 52, 15, 0.2);
+            transition: 0.3s;
+            border-radius: 5px; /* 5px rounded corners */
+        }
+
+        .profil__container {
+
+
+        }
+        .card__profil__image__circle {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .inner__container {
+            padding: 2px 16px;
+        }
+
+        /* @see https://www.kylejlarson.com/blog/how-to-create-pie-charts-with-css3/ */
+        .pieContainer {
+            height: 100px;
+        }
+
+        .pieBackground {
+            background-color: grey;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -o-border-radius: 50px;
+            border-radius: 50px;
+            -moz-box-shadow: -1px 1px 3px #000;
+            -webkit-box-shadow: -1px 1px 3px #000;
+            -o-box-shadow: -1px 1px 3px #000;
+            box-shadow: -1px 1px 3px #000;
+        }
+
+        .hold {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -o-border-radius: 50px;
+            border-radius: 50px;
+            clip: rect(0px, 100px, 100px, 50px);
+        }
+
+        #pieSliceBlue .pie {
+            background-color: #1b458b;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        #pieSliceBlue2 {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        #pieSliceBlue2 .pie {
+            background-color: #1b458b;
+            -webkit-transform: rotate(40deg);
+            -moz-transform: rotate(40deg);
+            -o-transform: rotate(40deg);
+            transform: rotate(40deg);
+        }
+
+        #pieSliceRed {
+            -webkit-transform: rotate(220deg);
+            -moz-transform: rotate(220deg);
+            -o-transform: rotate(220deg);
+            transform: rotate(220deg);
+        }
+
+        #pieSliceRed .pie {
+            background-color: #cc0000;
+            -webkit-transform: rotate(140deg);
+            -moz-transform: rotate(140deg);
+            -o-transform: rotate(140deg);
+            transform: rotate(140deg);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="profil__container">
+        <div class="left"><h4>Dein Profil</h4></div>
+        <div class="right"><span><i class="fa fa-cog" aria-hidden="true"></i></span></div>
+    </div>
+
+    <div class="card__container">
+        <div class="card__profil__container">
+            <div class="card__profil__image">
+                <img src="assets/images/frau.jpg" alt="Avatar" class="card__profil__image__circle">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <strong class="fa-stack-1x">3</strong>
+            </div>
+        </div>
+        <img src="assets/images/frau.jpg" alt="Avatar" style="width:100%">
+        <div class="inner__container">
+            <h4><b>John Doe</b></h4>
+            <p>Architect & Engineer</p>
+
+            <div id="pieContainer">
+                <div class="pieBackground"></div>
+                <div id="pieSliceBlue" class="hold">
+                    <div class="pie"></div>
+                </div>
+                <div id="pieSliceBlue2" class="hold">
+                    <div class="pie"></div>
+                </div>
+                <div id="pieSliceRed" class="hold">
+                    <div class="pie"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
